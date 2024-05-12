@@ -17,9 +17,9 @@ public class QuanLyDangNhap {
     
     public QuanLyDangNhap(){
         qlnv = new QuanLyNhanVien();
-        ds_NhanVien =qlnv.getDS_NhanVien();
+        ds_NhanVien = qlnv.getDS_NhanVien();
     }
-    
+//    admin co manv = 1;
     public int Login(String username, String password) {
     	String ma = "1";
         for (int i = 0; i < ds_NhanVien.size(); i++) {

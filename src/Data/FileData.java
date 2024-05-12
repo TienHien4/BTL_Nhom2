@@ -208,8 +208,9 @@ public class FileData {
             FileInputStream fis = new FileInputStream(file3);
             ObjectInputStream ois = new ObjectInputStream(fis);
             ds_HoaDon = (ArrayList<HoaDon>) ois.readObject();
-            ois.close();
             fis.close();
+            ois.close();
+            
         } catch (EOFException ignored) {
             
 
