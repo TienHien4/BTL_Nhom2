@@ -15,7 +15,10 @@ import model.ThuChiQL;
 import view.FrameQuanLy;
 import view.FrameThuChi;
 
-
+/**
+ *
+ * @author tungb_000
+ */
 public class QuanLyThuChi {
     
     JTable table;
