@@ -212,7 +212,6 @@ public class FileData {
             ois.close();
             
         } catch (EOFException ignored) {
-            
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -33,7 +33,7 @@ public class QuanLyDangNhap {
                 }
             }
         }
-        return 0;
+        return 2;
     }
     
     public void login(int type,String user){
