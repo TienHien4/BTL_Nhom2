@@ -1,6 +1,8 @@
 package controller;
 
 import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import model.NhanVien;
@@ -46,8 +48,12 @@ public class QuanLyNhanVien {
     }
     
     public void themNhanVien(NhanVien nv) {
-        nhanVienQL.themNhanVien(nv);
-        load_NhanVien();
+    	if (nhanVienQL.isMaNhanVienExist(nv.getMaNhanVien())) {
+            JOptionPane.showMessageDialog(null, "Không thể thêm được! Mã nhân viên đã tồn tại.", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        } else {
+            nhanVienQL.themNhanVien(nv);
+            load_NhanVien();
+        }
     
     }
     
@@ -64,6 +70,7 @@ public class QuanLyNhanVien {
     public void xoaNhanVien(int index) {
         nhanVienQL.xoaNhanVien(index);
         load_NhanVien();
+        JOptionPane.showMessageDialog(null, "xoá thành công!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
        
     }
      
