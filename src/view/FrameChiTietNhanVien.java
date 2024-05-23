@@ -64,8 +64,6 @@ public class FrameChiTietNhanVien extends javax.swing.JFrame {
             }
             tfSoDienThoai.setText(nv.getSoDienThoai());
             tfEmail.setText(nv.getEmail());
-        
-        
             tfTenTaiKhoan.setText(nv.getTenDangNhap());
             tfTenTaiKhoan.setEditable(false);
             tfMatKhau.setText(nv.getMatKhau());
@@ -124,7 +122,7 @@ public class FrameChiTietNhanVien extends javax.swing.JFrame {
 
         lblEmailNhanVien.setFont(new java.awt.Font("Tahoma", 1, 14)); 
         lblEmailNhanVien.setText("Email:");
-
+        
         lblMaNhanVien.setFont(new java.awt.Font("Tahoma", 1, 14)); 
         lblMaNhanVien.setText("Mã Nhân Viên:");
 
@@ -183,13 +181,6 @@ public class FrameChiTietNhanVien extends javax.swing.JFrame {
                 btHuyActionPerformed(evt);
             }
         });
-        
-        textField = new JTextField();
-        textField.setBackground(Color.WHITE);
-        
-        lblDiaChi_1 = new JLabel();
-        lblDiaChi_1.setText("Địa Chỉ:");
-        lblDiaChi_1.setFont(new Font("Tahoma", Font.BOLD, 14));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1Layout.setHorizontalGroup(
@@ -207,27 +198,22 @@ public class FrameChiTietNhanVien extends javax.swing.JFrame {
         							.addComponent(lblTenNhanVien, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
         							.addPreferredGap(ComponentPlacement.RELATED)
         							.addComponent(tfTenNhanVien, GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE))
-        						.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
-        							.addGroup(jPanel1Layout.createSequentialGroup()
-        								.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
-        									.addComponent(lblMaNhanVien, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
-        									.addComponent(lblGioiTinh, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE))
-        								.addPreferredGap(ComponentPlacement.RELATED)
-        								.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING, false)
-        									.addGroup(jPanel1Layout.createSequentialGroup()
-        										.addComponent(rdNam, GroupLayout.PREFERRED_SIZE, 92, GroupLayout.PREFERRED_SIZE)
-        										.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        										.addComponent(rdNu, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE))
-        									.addComponent(tfMaNhanVien, GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)))
-        							.addComponent(jPanel3, GroupLayout.PREFERRED_SIZE, 376, GroupLayout.PREFERRED_SIZE)
-        							.addGroup(jPanel1Layout.createSequentialGroup()
-        								.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING)
-        									.addComponent(lblDiaChi_1, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
-        									.addComponent(lblEmailNhanVien, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE))
-        								.addPreferredGap(ComponentPlacement.RELATED)
-        								.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
-        									.addComponent(textField, GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)
-        									.addComponent(tfEmail, GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE))))))
+        						.addGroup(jPanel1Layout.createSequentialGroup()
+        							.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+        								.addComponent(lblMaNhanVien, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
+        								.addComponent(lblGioiTinh, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE))
+        							.addPreferredGap(ComponentPlacement.RELATED)
+        							.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING, false)
+        								.addGroup(jPanel1Layout.createSequentialGroup()
+        									.addComponent(rdNam, GroupLayout.PREFERRED_SIZE, 92, GroupLayout.PREFERRED_SIZE)
+        									.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        									.addComponent(rdNu, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE))
+        								.addComponent(tfMaNhanVien, GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE)))
+        						.addComponent(jPanel3, GroupLayout.PREFERRED_SIZE, 376, GroupLayout.PREFERRED_SIZE)
+        						.addGroup(jPanel1Layout.createSequentialGroup()
+        							.addComponent(lblEmailNhanVien, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
+        							.addPreferredGap(ComponentPlacement.RELATED)
+        							.addComponent(tfEmail, GroupLayout.PREFERRED_SIZE, 250, GroupLayout.PREFERRED_SIZE))))
         				.addComponent(lblNhanVien, GroupLayout.PREFERRED_SIZE, 377, GroupLayout.PREFERRED_SIZE)
         				.addGroup(jPanel1Layout.createSequentialGroup()
         					.addComponent(lblSoDienThoai, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
@@ -263,11 +249,7 @@ public class FrameChiTietNhanVien extends javax.swing.JFrame {
         			.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
         				.addComponent(lblEmailNhanVien, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
         				.addComponent(tfEmail, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-        			.addGap(15)
-        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING)
-        				.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-        				.addComponent(lblDiaChi_1, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE))
-        			.addGap(78)
+        			.addGap(106)
         			.addComponent(jPanel3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
         			.addPreferredGap(ComponentPlacement.UNRELATED)
         			.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
@@ -299,19 +281,10 @@ public class FrameChiTietNhanVien extends javax.swing.JFrame {
 
     private void btOKActionPerformed(java.awt.event.ActionEvent evt) {
         String thongBao = "";
-        if (tfMaNhanVien.getText().trim().length() == 0) {
-            thongBao += "Chưa Điền mã nhân viên";
+        if (tfMaNhanVien.getText().trim().length() == 0 || tfTenNhanVien.getText().trim().length() == 0 || tfEmail.getText().trim().length() == 0 || tfSoDienThoai.getText().trim().length() == 0 || tfTenTaiKhoan.getText().trim().length() == 0 || tfMatKhau.getText().trim().length() == 0 || (!rdNam.isSelected() && !rdNu.isSelected()) ) {
+            thongBao += "Không được để trống! Vui lòng nhập đầy đủ các thông tin.";//*
         }
-        if (tfTenNhanVien.getText().trim().length() == 0) {
-            thongBao += "\nChưa Điền tên nhân viên";
-        }
-       
-        if (tfEmail.getText().trim().length() == 0) {
-            thongBao += "\nChưa điên email";
-        }
-        if (tfSoDienThoai.getText().trim().length() == 0) {
-            thongBao += "\nChưa điên số điện thoại";
-        }
+        
        
         if (thongBao.length() != 0) {
             JOptionPane.showMessageDialog(null, thongBao, "Thông Báo", JOptionPane.INFORMATION_MESSAGE);
@@ -334,26 +307,10 @@ public class FrameChiTietNhanVien extends javax.swing.JFrame {
             } else {
                 NhanVien nv = new NhanVien(maNhanVien, tenNhanVien, gioiTinh, email, soDienThoai, tenDangNhap, matKhau);
                 qlNhanVien.suaThongTinNhanVien(nv, index);
+                JOptionPane.showMessageDialog(null, "Cập nhật thành công!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);//*
             }
             this.dispose();
         }
-    }
-
-    public static Date string_To_Date(String s) {
-        SimpleDateFormat dateformat = new SimpleDateFormat("dd-MM-yyyy");
-        Date date = null;
-        try {
-            date = dateformat.parse(s);
-        } catch (ParseException ex) {
-            Logger.getLogger(FrameChiTietNhanVien.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return date;
-    }
-
-    public static String date_To_String(java.util.Date date) {
-        SimpleDateFormat dateformat = new SimpleDateFormat("dd-MM-yyyy");
-        String s = dateformat.format(date);
-        return s;
     }
 
     private javax.swing.JButton btHuy;
@@ -378,6 +335,4 @@ public class FrameChiTietNhanVien extends javax.swing.JFrame {
     private javax.swing.JTextField tfSoDienThoai;
     private javax.swing.JTextField tfTenNhanVien;
     private javax.swing.JTextField tfTenTaiKhoan;
-    private JTextField textField;
-    private JLabel lblDiaChi_1;
 }
