@@ -1317,7 +1317,6 @@ public class FrameQuanLy extends javax.swing.JFrame {
     }
 
     private void btnXacNhanActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
         int i = tableHoaDon.getSelectedRow();
         if (i != -1) {
             qlBanHang.xemChiTiet(i);
@@ -1330,7 +1329,7 @@ public class FrameQuanLy extends javax.swing.JFrame {
     }
 
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {/
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {
         
         int i = tableThuChi.getSelectedRow();
         if (i != -1) {
