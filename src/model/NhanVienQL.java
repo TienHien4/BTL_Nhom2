@@ -15,7 +15,15 @@ public class NhanVienQL implements Serializable{
     public ArrayList<NhanVien> getDS_NhanVien() {
         return file.get_Ds_NhanVien();
     }
-
+    
+    public boolean isMaNhanVienExist(String maNhanVien) {
+        for (NhanVien nv : file.get_Ds_NhanVien()) {
+            if (nv.getMaNhanVien().equalsIgnoreCase(maNhanVien)) {
+                return true;
+            }
+        }
+        return false;
+    }
     public void themNhanVien(NhanVien nv) {
         FileData.ds_NhanVien.add(nv);
         file.writeNhanVienToFile();
