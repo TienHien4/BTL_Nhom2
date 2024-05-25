@@ -96,9 +96,7 @@ public class FileData {
     public void writeSanPhamToFile() {
         try {
             file = new File("C:\\Users\\GiGa\\eclipse-workspace\\JavaSwing\\src\\DanhSachSanPham.txt");
-            if (file.exists()) {
-                file.delete();
-            }
+         
             FileOutputStream fos = new FileOutputStream(file);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(ds_Sach);
