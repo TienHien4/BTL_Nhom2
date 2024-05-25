@@ -686,19 +686,22 @@ public class FrameNhanVien extends javax.swing.JFrame {
     private void btCapNhatSanPhamActionPerformed(java.awt.event.ActionEvent evt) {
         reset();
         int i = tableSanPham.getSelectedRow();
-        try {
+        if (i != -1) {
             qlSanPham.suaThongTin(i);
-        } catch (Exception e) {
+        } else {
+            JOptionPane.showMessageDialog(null, "Hãy Chọn Một Sản Phẩm", "Thông Báo", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
     private void btXoaSanPhamActionPerformed(java.awt.event.ActionEvent evt) {
         int i = tableSanPham.getSelectedRow();
         if (i != -1) {
-            int j = JOptionPane.showConfirmDialog(null, "Bạn Có Chắc Chắn Muốn Loại Bỏ Sản Phẩm Này", "Thông Báo", JOptionPane.YES_NO_OPTION);
+            int j = JOptionPane.showConfirmDialog(null, "Bạn Có Chắc Chắn Muốn Loại bỏ sản phẩm này", "Thông Báo", JOptionPane.YES_NO_OPTION);
             if (j == JOptionPane.YES_OPTION) {
                 qlSanPham.xoaSanPham(i);
             }
+        } else {
+            JOptionPane.showMessageDialog(null, "Hãy Chọn Một Sản Phẩm", "Thông Báo", JOptionPane.INFORMATION_MESSAGE);
         }
         reset();
     }
