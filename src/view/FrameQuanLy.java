@@ -1298,6 +1298,8 @@ public class FrameQuanLy extends javax.swing.JFrame {
             if (i == JOptionPane.YES_OPTION) {
                 qlNhanVien.xoaNhanVien(index);
             }
+        }else {
+            JOptionPane.showMessageDialog(null, "Hãy Chọn Một Nhân Viên", "Thông Báo", JOptionPane.INFORMATION_MESSAGE);
         }
         resetTab2();
     }
