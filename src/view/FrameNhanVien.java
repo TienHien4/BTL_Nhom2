@@ -441,7 +441,7 @@ public class FrameNhanVien extends javax.swing.JFrame {
         btnXacNhan7.setText("Xác Nhận");
         btnXacNhan7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-               
+            	btnXacNhan7ActionPerformed(evt);
             }
         });
 
@@ -477,7 +477,7 @@ public class FrameNhanVien extends javax.swing.JFrame {
             tableBanHang.getColumnModel().getColumn(4).setPreferredWidth(50);
         }
 
-        //jLabel2.setText("Tổng Số Tiền:");
+        jLabel2.setText("Tổng Số Tiền:");
 
         javax.swing.GroupLayout pnChiTietBanHang7Layout = new javax.swing.GroupLayout(pnChiTietBanHang7);
         pnChiTietBanHang7.setLayout(pnChiTietBanHang7Layout);
@@ -489,7 +489,7 @@ public class FrameNhanVien extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tfTongTien, javax.swing.GroupLayout.PREFERRED_SIZE,0, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tfTongTien, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnChiTietBanHang7Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -686,22 +686,19 @@ public class FrameNhanVien extends javax.swing.JFrame {
     private void btCapNhatSanPhamActionPerformed(java.awt.event.ActionEvent evt) {
         reset();
         int i = tableSanPham.getSelectedRow();
-        if (i != -1) {
+        try {
             qlSanPham.suaThongTin(i);
-        } else {
-            JOptionPane.showMessageDialog(null, "Hãy Chọn Một Sản Phẩm", "Thông Báo", JOptionPane.INFORMATION_MESSAGE);
+        } catch (Exception e) {
         }
     }
 
     private void btXoaSanPhamActionPerformed(java.awt.event.ActionEvent evt) {
         int i = tableSanPham.getSelectedRow();
         if (i != -1) {
-            int j = JOptionPane.showConfirmDialog(null, "Bạn Có Chắc Chắn Muốn Loại bỏ sản phẩm này", "Thông Báo", JOptionPane.YES_NO_OPTION);
+            int j = JOptionPane.showConfirmDialog(null, "Bạn Có Chắc Chắn Muốn Loại Bỏ Sản Phẩm Này", "Thông Báo", JOptionPane.YES_NO_OPTION);
             if (j == JOptionPane.YES_OPTION) {
                 qlSanPham.xoaSanPham(i);
             }
-        } else {
-            JOptionPane.showMessageDialog(null, "Hãy Chọn Một Sản Phẩm", "Thông Báo", JOptionPane.INFORMATION_MESSAGE);
         }
         reset();
     }
@@ -773,6 +770,30 @@ public class FrameNhanVien extends javax.swing.JFrame {
             qlThuChi.writeThuChiToFile();
             System.exit(0);
         }
+    }
+    private void btnXacNhan7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXacNhan7ActionPerformed
+        ArrayList<SanPham> listSanPhamTrongHoaDon = getListSPTrongHD();
+        long tongTien = 0;
+        for (int i = 0; i < listSanPhamTrongHoaDon.size(); i++) {
+            SanPham sp = listSanPhamTrongHoaDon.get(i);
+            tongTien += sp.getGiaBan() * sp.getSoLuong();
+        }
+        if (!listSanPhamTrongHoaDon.isEmpty()) {
+            String maHoaDon = setMaHoaDon();
+            String ngay = getCurrentDate();
+            try {
+                qlBanHang.taoHoaDon(new HoaDon(maHoaDon, ngay, listSanPhamTrongHoaDon, tongTien));
+                
+            } catch (IOException ex) {
+                Logger.getLogger(FrameNhanVien.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        listSanPhamTrongHoaDon.clear();
+        tfTongTien.setText(tongTien + "");
+        DefaultTableModel model = (DefaultTableModel) tableBanHang.getModel();
+        model.setRowCount(0);
+        tfThemMaSanPham.setText("");
+        tfThemSoLuong.setText("");
     }
 
     private void btThemVaoGioHangActionPerformed(java.awt.event.ActionEvent evt) {

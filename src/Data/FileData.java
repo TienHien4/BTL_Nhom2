@@ -187,7 +187,7 @@ public class FileData {
 
     public void writeHoaDonToFile() {
         try {
-            file3 = new File("E:\\JAVA2024\\BTL_Nhom3\\srcs\\DanhSachHoaDon.txt");
+            file3 = new File("E:\\JAVA2024\\BTL_Nhom3\\src\\DanhSachHoaDon.txt");
             if (file3.exists()) {
                 file3.delete();
             }
