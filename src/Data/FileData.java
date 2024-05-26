@@ -37,7 +37,7 @@ public class FileData {
 
     public FileData() {
         try {
-            file = new File("C:\\Users\\GiGa\\eclipse-workspace\\JavaSwing\\src\\DanhSachSanPham.txt");
+            file = new File("E:\\JAVA2024\\BTL_Nhom3\\src\\DanhSachSanPham.txt");
             FileInputStream fos = new FileInputStream(file);
             ObjectInputStream oos = new ObjectInputStream(fos);
             oos.close();
@@ -51,7 +51,7 @@ public class FileData {
         }
 
         try {
-            file1 = new File("C:\\Users\\GiGa\\eclipse-workspace\\JavaSwing\\src\\DanhSachNhanVien.txt");
+            file1 = new File("E:\\JAVA2024\\BTL_Nhom3\\src\\DanhSachNhanVien.txt");
             FileInputStream fos = new FileInputStream(file1);
             ObjectInputStream oos = new ObjectInputStream(fos);
             oos.close();
@@ -65,7 +65,7 @@ public class FileData {
         }
 
         try {
-            file2 = new File("C:\\Users\\GiGa\\eclipse-workspace\\JavaSwing\\src\\DanhSachThuChi.txt");
+            file2 = new File("E:\\JAVA2024\\BTL_Nhom3\\src\\DanhSachThuChi.txt");
             FileInputStream fos = new FileInputStream(file2);
             ObjectInputStream oos = new ObjectInputStream(fos);
             oos.close();
@@ -79,7 +79,7 @@ public class FileData {
         }
 
         try {
-            file3 = new File("C:\\Users\\GiGa\\eclipse-workspace\\JavaSwing\\src\\DanhSachHoaDon.txt");
+            file3 = new File("E:\\JAVA2024\\BTL_Nhom3\\src\\DanhSachHoaDon.txt");
             FileInputStream fos = new FileInputStream(file3);
             ObjectInputStream oos = new ObjectInputStream(fos);
             oos.close();
@@ -95,7 +95,7 @@ public class FileData {
 
     public void writeSanPhamToFile() {
         try {
-            file = new File("C:\\Users\\GiGa\\eclipse-workspace\\JavaSwing\\src\\DanhSachSanPham.txt");
+            file = new File("E:\\JAVA2024\\BTL_Nhom3\\src\\DanhSachSanPham.txt");
          
             FileOutputStream fos = new FileOutputStream(file);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -125,7 +125,7 @@ public class FileData {
 
     public void writeNhanVienToFile() {
         try {
-            file1 = new File("C:\\Users\\GiGa\\eclipse-workspace\\JavaSwing\\src\\DanhSachNhanVien.txt");
+            file1 = new File("E:\\JAVA2024\\BTL_Nhom3\\src\\DanhSachNhanVien.txt");
             if (file1.exists()) {
                 file1.delete();
             }
@@ -156,7 +156,7 @@ public class FileData {
 
     public void writeThuChiToFile() {
         try {
-            file2 = new File("C:\\Users\\GiGa\\eclipse-workspace\\JavaSwing\\src\\DanhSachThuChi.txt");
+            file2 = new File("E:\\JAVA2024\\BTL_Nhom3\\src\\DanhSachThuChi.txt");
             if (file2.exists()) {
                 file2.delete();
             }
@@ -187,7 +187,7 @@ public class FileData {
 
     public void writeHoaDonToFile() {
         try {
-            file3 = new File("C:\\Users\\GiGa\\eclipse-workspace\\JavaSwing\\src\\DanhSachHoaDon.txt");
+            file3 = new File("E:\\JAVA2024\\BTL_Nhom3\\srcs\\DanhSachHoaDon.txt");
             if (file3.exists()) {
                 file3.delete();
             }
